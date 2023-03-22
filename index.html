@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макет</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="all">
+        <header class="header">
+
+            <a class="logo" href="index.html">
+                <img class="img" src="img/logo.svg" alt="logotype">
+            </a>
+            <nav>
+                <ul class="menu">
+                    <li class="menu__list"><a class="menu__link menu__link_aktive" href="index.html"> Главная</a></li>
+                    <li class="menu__list"><a class="menu__link" href="students.html"> Студенты</a></li>
+                    <li class="menu__list"><a class="menu__link" href="about.html"> О нас</a></li>
+                    <li class="menu__list"><a class="menu__link" href="contacts.html"> Контакты</a></li>
+                </ul>
+            </nav>
+            <a class="button" href="#">Войти</a>
+        </header>
+        <main class="content">
+            <h1 class="title">Добро пожаловать на курс “Создание веб-сайтов (HTML, CSS)”!</h1>
+            <div class="popup">
+                <p class="popup_info">Войти на сайт</p>
+                <form action="login" method="post" class="form">
+                    <input class="popup_log" type="text" name="user_name" placeholder="Логин">
+                    <input class="popup_password" type="text" name="password" placeholder="Пароль">
+                    <button class="button">Войти</button>
+                </form>
+            </div>
+            <img src="img/content_foto.jpg" alt="главное фото" class="content_foto">
+            <div class="content_info">
+                <div class="section">
+                    <div class="article">
+                        <h3 class="subtitle">Для кого этот курс</h3>
+                        <p class="about_text">Этот курс рассчитан на новичков, которые
+                            только начинают знакомство с
+                            веб-разработкой. В начале курса вы узнаете о том, как устроен Интернет и веб-сайты.
+                            <span class="white">
+                                Для обучения необходимо только владеть компьютерной грамотностью (пользоваться браузером,создавать папки и файлы, устанавливать программы).</span>
+                        </p>
+                    </div>
+                    <div class="article">
+                        <h3 class="subtitle2">Чему вы научитесь</h3>
+                        <p class="about_text">
+                            На этом курсе вы узнаете, как устроены веб-сайты и как создавать их с нуля.
+                            Изучите основы языков <span class="bold">HTML, CSS</span> и немного <span
+                                class="bold">JavaScript.</span> Мы вместе сверстаем сайт нашей группы по
+                            этому макету. А затем вы <span class="orange">сами</span> сверстаете свои личные странички в
+                            качестве домашнего задания и мы
+                            выложим все это на сервер.
+                        </p>
+                    </div>
+                </div>
+                <div class="content_text">
+                    <p class="marcs1">“</p>
+                    <p class="text_marcs">Учимся
+                        вместе!</p>
+                    <p class="marcs2">”</p>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <footer class="footer">
+        <p> 2023 &copy;<a class="footer_info" href="#"> учебный центр</a></p>
+    </footer>
+    <script>
+        const buttonEl = document.querySelector('.button');
+        const popupEl = document.querySelector('.popup');
+        buttonEl.addEventListener('click', function (e) {
+            popupEl.classList.toggle('visible');
+
+        });
+    </script>
+
+</body>
+
+</html>
