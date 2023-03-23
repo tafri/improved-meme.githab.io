@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макет</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="all">
+        <header class="header">
+
+            <a class="logo" href="index.html">
+                <img src="img/logo.svg" alt="logotype">
+            </a>
+            <nav>
+                <ul class="menu">
+                    <li class="menu__list"><a class="menu__link" href="index.html"> Главная</a></li>
+                    <li class="menu__list"><a class="menu__link" href="students.html"> Студенты</a></li>
+                    <li class="menu__list"><a class="menu__link" href="about.html"> О нас</a></li>
+                    <li class="menu__list"><a class="menu__link menu__link_aktive" href="contacts.html"> Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="button" href="#">Войти</a>
+        </header>
+        <main class="content_contacts">
+            <h1 class="contacts_title">Как нас найти 🗺️️</h1>
+            <div class="popup">
+                <p class="popup_info">Войти на сайт</p>
+                <form action="login" method="post" class="form">
+                    <input class="popup_log" type="text" name="user_name" placeholder="Логин">
+                    <input class="popup_password" type="text" name="password" placeholder="Пароль">
+                    <button class="button">Войти</button>
+                </form>
+            </div>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.4781545096016!2d30.3123338!3d59.940801!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963110ebe9ea5b%3A0x86b0025c5a84a071!2z0JTQstC-0YDRhtC-0LLQsNGPINC_0LsuLCAyLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkwMDAw!5e0!3m2!1sru!2sru!4v1677077112920!5m2!1sru!2sru"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="contacts">
+                <p class="contacts-text">Наши контакты</p>
+                <p class="contact-address"> Адрес: г. Санкт-Петербург, Дворцовая пл., 2, 190000
+                    <a class="contact_phone" href="tel:+7(812)555-55-55">+7 (812) 555-55-55</a>
+                </p>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <p> 2023 &copy;<a class="footer_info" href="#"> учебный центр</a></p>
+    </footer>
+    <script>
+        const buttonEl = document.querySelector('.button');
+        const popupEl = document.querySelector('.popup');
+        buttonEl.addEventListener('click', function (e) {
+            popupEl.classList.toggle('visible');
+
+        });
+    </script>
+</body>
+
+</html>
