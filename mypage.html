@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="img/icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макет</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="all">
+        <header class="header">
+
+            <a class="logo" href="index.html">
+                <img class="img" src="img/logo.svg" alt="логотип">
+            </a>
+            <nav>
+                <div class="burger">
+                    <div class="burger_item"></div>
+                    <div class="burger_item"></div>
+                    <div class="burger_item"></div>
+                </div>
+                <ul class="menu">
+                    <li class="menu__list"><a class="menu__link" href="index.html"> Главная</a></li>
+                    <li class="menu__list"><a class="menu__link" href="students.html"> Студенты</a></li>
+                    <li class="menu__list"><a class="menu__link" href="about.html"> О нас</a></li>
+                    <li class="menu__list"><a class="menu__link" href="contacts.html"> Контакты</a></li>
+                    <li class="menu__list"><a class="menu__link menu__link_aktive" href="mypage.html">Страница</a></li>
+                </ul>
+            </nav>
+            <a class="button" href="#">Войти</a>
+        </header>
+        <main class="content_about">
+            <h1 class="about_title">Моя страница </h1>
+            <div class="popup">
+                <p class="popup_info">Войти на сайт</p>
+                <form action="login" method="post" class="form">
+                    <input class="popup_log" type="text" name="user_name" placeholder="Логин">
+                    <input class="popup_password" type="text" name="password" placeholder="Пароль">
+                    <button class="button">Войти</button>
+                </form>
+            </div>
+
+            <p class="about_text">Просто забавное видео</p>
+            <video class="about_video1" src="video/videoplayback.mp4" controls></video>
+            <div class="article1">
+                <h3 class="subtitle">Просто анекдот.</h3>
+                <p class="about_text">Сдача экзамена по вождению. Инспектор:
+                    — Даю вводную. Вы управляете движущимся транспортным средством. Вдруг перед вами появляются две
+                    фигуры — девочка и старушка. Кого давить будете?
+                    — Гм. Ну, это. Старушку.
+                    — Тормоз! Тормоз давить надо!!!
+                </p>
+            </div>
+        </main>
+        <footer class="footer">
+            <p> 2023 &copy;<a class="footer_info" href="contacts.html"> учебный центр</a></p>
+        </footer>
+        <script>
+            const buttonEl = document.querySelector('.button');
+            const popupEl = document.querySelector('.popup');
+            buttonEl.addEventListener('click', function (e) {
+                popupEl.classList.toggle('visible');
+
+            });
+        </script>
+        <script>
+            const burgerEl = document.querySelector('.burger');
+            const menuEl = document.querySelector('.menu');
+            burgerEl.addEventListener('click', function () {
+                menuEl.classList.toggle('menu_show');
+
+            });
+        </script>
+    </div>
+</body>
+
+</html>
